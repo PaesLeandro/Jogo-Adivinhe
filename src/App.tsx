@@ -1,9 +1,11 @@
 import styles from "./app.module.css";
 
-import { Input } from "./components/Input";
 import { Tip } from "./components/Tip";
+import { Button } from "./components/Button";
+import { Input } from "./components/Input";
 import { Letter } from "./components/Letter";
 import { Header } from "./components/Header";
+import { LettersUsed } from "./components/LettersUsed";
 
 export default function App() {
   function handleRestartGame() {
@@ -28,9 +30,12 @@ export default function App() {
 
       <h4>Palpite</h4>
 
-      <div>
+      <div className={styles.guess}>
         <Input autoFocus maxLength={1} placeholder="?"/>
+        <Button title="Confirmar" />
       </div>
+
+      <LettersUsed />
       </main>
     </div>
   )
