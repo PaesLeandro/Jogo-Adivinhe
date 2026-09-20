@@ -20,7 +20,7 @@ export default function App() {
 
   function handleRestartGame() {
     const isConfirmed = window.confirm("Você tem certeza que deseja reiniciar o jogo?");
-    
+
     if (isConfirmed) {
       startGame();
     }
@@ -88,7 +88,7 @@ function endGame(message: string) {
       }
 
       const attemptLimit = challenge.word.length + ATTEMPTS_MARGIN;
-      if(letterUsed.length === attemptLimit) {
+      if(lettersUsed.length === attemptLimit) {
         return endGame("Que pena, você usou todas as tentativas!");
       }
 
